@@ -14,6 +14,19 @@ def delDupliDuo(li):  # Using sets to make set without duplicates
     return x  # Because sets aren't allowed to have duplicates
 
 
+def task5():
+    a = random.sample(range(0, 100), random.randint(1, 25))
+    b = random.sample(range(0, 100), random.randint(1, 25))
+
+    print(a)
+    print(b)
+    x = set(a).intersection(set(b))
+    if len(x) > 0:
+        return x
+    else:
+        return 'Empty set'
+
+
 lis = []
 i = random.randint(1, 30)  # Generating random length of the list
 
@@ -22,5 +35,9 @@ while i > 0:
     i -= 1
 
 print(lis)
+print("Loop version result: ")
 print(delDupliUno(lis))
+print("Set version result: ")
 print(delDupliDuo(lis))
+print("Task number 5 using sets: ")
+print(task5())
